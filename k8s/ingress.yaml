@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-app-izaias
@@ -9,6 +9,8 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: service-app-izaias
-          servicePort: 5000
+          service:
+            name: service-app-izaias
+            port: 
+              number: 5000
         pathType: ImplementationSpecific
