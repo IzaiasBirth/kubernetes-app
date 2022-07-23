@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-app-izaias
+  namespace: aluno-izaias
+spec:
+  rules:
+  - host: app-izaias-izaias.aula.jac.bsb.br
+    http:
+      paths:
+      - backend:
+          serviceName: service-app-izaias
+          servicePort: 5000
+        pathType: ImplementationSpecific
