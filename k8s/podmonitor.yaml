@@ -7,8 +7,7 @@ metadata:
   namespace: aluno-izaias
 spec:
   podMetricsEndpoints:
-  - port: 
-      number: 5000
+  - port: http
     interval: 10s
   selector:
     matchLabels:
