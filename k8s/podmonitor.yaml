@@ -3,11 +3,12 @@ kind: PodMonitor
 metadata:
   labels:
     app: app-izaias
-  name: podmonitor-app-izaias
+  name: app-izaias
   namespace: aluno-izaias
 spec:
   podMetricsEndpoints:
-  - port: 5000
+  - port: 
+      number: 5000
     interval: 10s
   selector:
     matchLabels:
